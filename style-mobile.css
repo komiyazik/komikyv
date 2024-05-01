@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Times New Roman';
+}
+header {
+	width: 100%;
+    text-align: center;
+    height: 10em;
+    background: #50c878;
+	color: white;
+	z-index: 1;
+	margin-bottom: 10%;
+}
+header h1{
+	font-size: 2em;
+	margin-right: 5%;
+	margin-left: 25%;
+	padding-top: 5%;
+	text-align: left;
+}
+header::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+ 
+header nav a {
+    padding: 0 0.6em;
+    white-space: nowrap;
+}
+ 
+header nav a:last-child {
+    padding-right: 0;
+}
+.ver{
+	color: #50c878;
+	font-size: 120%;
+	margin: 5%;
+	padding: 1%;
+  text-decoration: none;
+}
+.ver:hover{
+	color: #3e8e41;
+}
+@media screen and (max-width: 720px){
+     
+    header {
+        height: auto;
+    }
+     
+    header > div,
+    header > div h1,
+    header nav {
+        height: auto;
+        width: auto;
+        display: block;
+        text-align: center;
+    }
+     
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5%;
+}
+
+#searchbar {
+	margin: 2%;
+	padding: 1%;
+	border-radius: 10px;
+	width: 70%;
+	box-sizing: border-box;
+	font-size: 100%;
+}
+
+#list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.word {
+	font-size: 1.2em;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+.word:last-child {
+	border-bottom: none;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 70% 5%;
+  font-size: 170%;
+  margin: 0;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: left;
+  list-style: none;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.str{
+	display: inline-block;
+	width: 100%;
+}
+#summary{
+	width: 80%;
+	border-radius: 20px;
+	align-items: center;
+	margin: 10%;
+	border: 10px;
+}
+#öb{
+	width: 5%;
+	font-size: 120%;
+	background-color: #50c878;
+	color: white;
+	border-color: #50c878;
+	border-radius: 20px;
+	cursor: pointer;
+}
+#ib{
+	width: 5%;
+	font-size: 120%;
+	background-color: #50c878;
+	color: white;
+	border-color: #50c878;
+	border-radius: 20px;
+	cursor: pointer;
+}
+summary{
+	padding: 5px;
+  background-color: #50c878;
+  color: white;
+  border: 1px #ccc solid;
+  cursor: pointer;
+  list-style: none;
+  border-color: white;
+  text-align: center;
+  border-radius: 20px;
+}
+.mat{
+	border: none;
+  padding: 10px;
+}
+.mat p{
+	font-size: 120%;
+}
+
+.matsec{
+	margin-top: 0%;
+}
+
+.btn-up {
+  /* фиксированное позиционирование */
+  position: fixed;
+  /* цвет фона */
+  background-color: #50c878;
+  /* расстояние от правого края окна браузера */
+  right: 20px;
+  /* расстояние от нижнего края окна браузера */
+  bottom: 0;
+  /* скругление верхнего левого угла */
+  border-top-left-radius: 8px;
+  /* скругление верхнего правого угла */
+  border-top-right-radius: 8px;
+  /* вид курсора */
+  cursor: pointer;
+  /* отображение элемента как flex */
+  display: flex;
+  /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+  align-items: center;
+  /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+  justify-content: center;
+  /* ширина элемента */
+  width: 60px;
+  /* высота элемента */
+  height: 50px;
+}
+
+.btn-up::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+  display: none;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #50c878; /* цвет заднего фона при наведении */
+  }
+}
